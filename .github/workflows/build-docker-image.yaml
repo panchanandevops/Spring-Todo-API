@@ -44,7 +44,7 @@ jobs:
           context: ./server 
           file: ./server/Dockerfile.prod
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: v${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=registry,ref=panchanandevops/todo-spring-api:cache # Pull cache from the registry
           cache-to: type=registry,ref=panchanandevops/todo-spring-api:cache,mode=max # Push cache to the registry
